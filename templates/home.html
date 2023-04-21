@@ -1,11 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>No Tip No Trip</title>
-    </head>
-    <body>
-        <div class="header">
-            <h1>Cost per Mile Calculator</h1>
-        </div>
-    </body>
+<html>
+<head>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<title>No Tip No Trip</title>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  left: 0;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+
+  <div class="dropdown">
+    <button style='font-size:24px'> <i class='fas fa-angle-double-down'></i></button>
+    <button class="dropbtn">
+      <i class="fas fa-angle-double-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Home</a>
+      <a href="#">Calculator</a>
+      <a href="#">About</a>
+
+    </div>
+  </div> 
+</div>
+
+<h3>No Tip No Trip</h3>
+
+</body>
 </html>
+
+
