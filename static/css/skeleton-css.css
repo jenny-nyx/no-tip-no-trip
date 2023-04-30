@@ -18,6 +18,7 @@
   font-family: 'TT Norms Pro', sans-serif;
 }
 
+/* This is the content in the dropdown menu */
 .dropdown-content a {
   float: none;
   color: black;

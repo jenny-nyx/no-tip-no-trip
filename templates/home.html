@@ -2,7 +2,7 @@
 <html>
 <head>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/skeleton-css.css') }}">
-  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/skeleton-script.js') }}"></script>
   <title>No Tip No Trip</title>
 </head>
 
@@ -13,15 +13,21 @@
     </div>
     <div class="dropdown">
       <button class="dropdown-button" onclick='dropdownMenu()'>
-          Button
+          Button <!-- need button icon here -->
       </button>
       <div class="dropdown-content" id="dropdown-content">
-        <a href="#">Calculator</a>
-        <a href="#">Fun Stuff</a>
+        <a href= {{url_for('tripCalculator')}}>Calculator</a>  
+        <a href="#">Let's talk about tipping</a>
+        <a href="#">Graphs are cool</a>
         <a href="#">About</a>
       </div>
     </div>
   </div>
+
+  <h1>
+    No Tip No Trip
+  </h1>
+
 </body>
 </html>
 

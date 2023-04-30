@@ -12,9 +12,7 @@ def calculator( miles, returnTrip, costOfOwnership, gas, orderPrice ):
     profitNoReturn = coverCostNoReturn - orderPrice
     profitWithReturn = coverCostWithReturn - orderPrice
 
-
-    retVal = [coverCostNoReturn, coverCostWithReturn, profitNoReturn, profitWithReturn]
-    
+    retVal = [coverCostNoReturn, coverCostWithReturn, profitNoReturn, profitWithReturn]  
     return retVal
 
 def main():
@@ -24,5 +22,5 @@ def main():
     gasPerG = 3.25
     orderPrice = 10
     result = calculator( miles, returnTrip, costOfOwnership, gasPerG, orderPrice )
-    print (result)
+    print ("printing from calculator.main(): ", result)
     return result

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/calculator.css') }}">
+  <script src="{{ url_for('static', filename='js/skeleton-script.js') }}"></script>
+  <title>NTNT - Calculator</title>
+</head>
+<body>
+  <div class="calculator-header">
+  <p>
+    Is your trip worth it? Try out this calculator to see
+  </p>
+  <form action="http://localhost:5000/calculator" method="POST">
+    <p> First part is determining the cost of ownership of your car. </p>
+    <p> This is determined by 5 different things: gas, maintenance, insurance, depreciation, and registration</p>
+    <p> According to AAA - the average cost of ownership for driving 15,000 miles is $10,728 in 2022. </p>
+    <div class="calculator-inputs"> Price of the order
+      <input type="number" name="orderCost">
+    </div>
+    <div class="calculator-inputs"> how many miles is your trip?
+      <input type="number" name="miles" value=20/>
+    </div>
+    <div class="calculator-inputs"> is there a return trip?
+      <input type="checkbox" name="return"/>
+    </div>
+    <div class="calculator-inputs"> cost of ownership of your car?
+      <input type="number" name="costOfOwnership" value=10728>
+    </div>
+    <div class="calculator-inputs"> gas price
+      <input type="number" name="gasPrice" value=3.40>
+    </div>
+    <div class="submit-button">
+      <input type="submit" value="submit">
+    </div>
+  </form>
+  </div>
+</body>
+</html>
