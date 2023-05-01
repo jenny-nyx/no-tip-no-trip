@@ -9,12 +9,11 @@ def root():
     return render_template('home.html')
 
 @app.route('/calculator', methods = ['POST', 'GET'])
-def tripCalculator():
-    # this will probably take in miles and return trip?
-    form_data = request.form.to_dict()
-    print(form_data)
-    calculator.main()
-    return render_template('calculator.html', form_data = form_data)
+def calculate():
+    if request.method == "POST":
+      form_data = request.form.to_dict()
+      calcOutput = calculator.calculate( form_data )
+    return render_template('calculator', calcOutput = calcOutput)
 
 if __name__ == "__main__":
     app.run( debug = True)
