@@ -4,27 +4,32 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
 
   <!-- A block defines a piece in the base template that a child template can override -->
   <title>{% block title %} No Tip No Trip {% endblock %}</title>
 </head>
 <body>
-  <div class="navbar">
-    <div class="deliver-logo">
-      <!--<img src="{{ url_for('static', filename='images/delivery.png') }}">-->
-    </div>
-    <div class="dropdown">
+  <div class="desktop">
+    <div class="navbar">
       <button class="dropdown-button" onclick='dropdownMenu()'>
-          Button <!-- need button icon here -->
+        <a href={{ url_for('views.home')}}>
+          <img class="icon-logo" src="{{ url_for('static', filename='images/logo.svg') }}" alt="Icon/Logo" />
+        </a>
       </button>
-      <div class="dropdown-content" id="dropdown-content">
-        <a href= {{url_for('views.calculator')}}>Calculator</a>  
-        <a href="#">Let's talk about tipping</a>
-        <a href="#">Graphs are cool</a>
-        <a href="#">About</a>
+      <div class="no-tip-no-trip">NO TIP, NO TRIP</div>
+
+      <div class="dropdown">
+        <img class="menu-logo" src="{{ url_for('static', filename='images/menu.svg') }}" alt="Icon/Logo" />
+        <div class="dropdown-content" id="dropdown-content">
+          <a href= {{url_for('views.calculator')}}>Calculator</a>  
+          <a href="#">Let's talk about tipping</a>
+          <a href="#">Graphs are cool</a>
+          <a href="#">About</a>
+        </div>
       </div>
-    </div>
-  </div> <!-- End class="navbar" -->
+    </div> <!-- End class="navbar" -->
+  </div> <!-- End class="desktop" -->
   {% block content %} {% endblock %}
 </body>
 </html>
