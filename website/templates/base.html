@@ -10,26 +10,29 @@
   <title>{% block title %} No Tip No Trip {% endblock %}</title>
 </head>
 <body>
-  <div class="desktop">
+  <div class="page-content">
     <div class="navbar">
       <button class="dropdown-button" onclick='dropdownMenu()'>
         <a href={{ url_for('views.home')}}>
           <img class="icon-logo" src="{{ url_for('static', filename='images/logo.svg') }}" alt="Icon/Logo" />
         </a>
       </button>
-      <div class="no-tip-no-trip">NO TIP, NO TRIP</div>
+      <div class="no-tip-no-trip">NO TIP, NO TRIP!</div>
 
-      <div class="dropdown">
+      <label for="menu-toggle">
         <img class="menu-logo" src="{{ url_for('static', filename='images/menu.svg') }}" alt="Icon/Logo" />
-        <div class="dropdown-content" id="dropdown-content">
-          <a href= {{url_for('views.calculator')}}>Calculator</a>  
-          <a href="#">Let's talk about tipping</a>
-          <a href="#">Graphs are cool</a>
-          <a href="#">About</a>
-        </div>
+      </label>
+      <input type="checkbox" id="menu-toggle" style="display: none;" />
+      <div id="side-menu">
+          <ul class="dropdown-content">
+            <a href= {{url_for('views.calculator')}}>Calculator</a>  
+            <a href="#">Let's talk about tipping</a>
+            <a href="#">Graphs are cool</a>
+            <a href="#">About</a>
+          </ul>
       </div>
     </div> <!-- End class="navbar" -->
-  </div> <!-- End class="desktop" -->
+  </div> <!-- End class="page-content" -->
   {% block content %} {% endblock %}
 </body>
 </html>
